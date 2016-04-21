@@ -169,10 +169,6 @@ layers configuration."
                             "\\.elc$" "\\.xfasl$")
    )
 
-  ;; Ensure .h files are opened for .cxx files
-  (add-to-list 'projectile-other-file-alist '("cxx" . ("h" "hxx" "ixx")))
-  (add-to-list 'projectile-other-file-alist '("h" . ("c" "cpp" "cxx" "ipp" "hpp" "m" "mm")))
-
   ;; Setting and showing the 80-character column width
   (set-fill-column 80)
   (auto-fill-mode t)

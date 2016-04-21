@@ -1,0 +1,13 @@
+# include what you want
+
+export PATH=$PATH:$HOME/bin
+
+# add this to the .bashrc: . $HOME/.bashrc.load
+
+####
+# put any bash customizations in here
+# Powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh

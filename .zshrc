@@ -71,3 +71,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export RBENV_ROOT="$(brew --prefix rbenv)"
 export GEM_HOME="$(brew --prefix)/opt/gems"
 export GEM_PATH="$(brew --prefix)/opt/gems"
+
+#alias my dotfiles config
+alias config='git --git-dir=$HOME/.myconf/ --work-tree=$HOME'

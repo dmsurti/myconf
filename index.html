@@ -43,7 +43,10 @@ config add .vimrc
 config commit -m "Add vimrc"
 config add .lispworks
 config commit -m "Add lispworks config"
-config push ...
+</code></pre>
+
+<p> Now create a remote repository and configure your local repository with ``git remote``. Then push your changes, for ex.</p>
+<pre><code> config push origin master
 </code></pre>
 
 <p>No extra tooling, no symlinks, files are tracked on a version control system, you can use different branches for different computers, you can replicate you configuration easily on new installation.</p>

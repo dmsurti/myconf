@@ -41,9 +41,9 @@
 <pre><code>config status
 config add .vimrc
 config commit -m "Add vimrc"
-config add .config/redshift.conf
-config commit -m "Add redshift config"
-config push
+config add .lispworks
+config commit -m "Add lispworks config"
+config push ...
 </code></pre>
 
 <p>No extra tooling, no symlinks, files are tracked on a version control system, you can use different branches for different computers, you can replicate you configuration easily on new installation.</p>
@@ -54,9 +54,13 @@ config push
 <p>This will work irrespective of your home directory being empty or not!!!</p>
 
 <pre><code>git clone --separate-git-dir=$HOME/.myconf /path/to/repo $HOME/myconf-tmp
-cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
-rm -r ~/myconf-tmp/
-alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+cp ~/myconf-tmp/\.* ~  # Copy all your dot files including .git, .gitmodules
+alias config='git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+config config status.showUntrackedFiles no
+</code></pre>
+
+<p> Test everything works as expected, then</p>
+<pre><code> rm -r ~/myconf-tmp/
 </code></pre>
 
 <h3>

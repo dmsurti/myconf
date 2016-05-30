@@ -74,3 +74,6 @@ export GEM_PATH="$(brew --prefix)/opt/gems"
 
 #alias my dotfiles config
 alias config='git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+
+# add latex path
+export PATH="$PATH:/Library/TeX/Distributions/TeXLive-2012.texdist/Contents/Programs/texbin/" # Required El Capitan onwards

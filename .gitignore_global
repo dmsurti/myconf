@@ -79,3 +79,14 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage
+# dependencies.
+Carthage
+
+# Sphinx
+_build
+Carthage/Checkouts
+Carthage/Build

@@ -174,6 +174,10 @@ layers configuration."
   (auto-fill-mode t)
   ;; Show 80 column marker, fci->fill-column-indicator, SPC t f
   (fci-mode 1)
+  (turn-on-fci-mode)
+
+  ;; toggle indent guide
+  (spacemacs/toggle-indent-guide-on)
 
   ;; no search highlight
   (global-evil-search-highlight-persist nil)

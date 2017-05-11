@@ -179,6 +179,11 @@ layers configuration."
   ;; toggle indent guide
   (spacemacs/toggle-indent-guide-on)
 
+  ;; truncate lines
+  (spacemacs/toggle-auto-fill-mode-on)
+  (spacemacs/toggle-truncate-lines-on)
+  (add-hook 'text-mode-hook 'spacemacs/toggle-visual-line-navigation-on)
+
   ;; no search highlight
   (global-evil-search-highlight-persist nil)
 

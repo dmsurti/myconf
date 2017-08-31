@@ -26,6 +26,7 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+xcshareddata/
 
 ## Other
 *.moved-aside
@@ -88,5 +89,8 @@ Carthage
 
 # Sphinx
 _build
+
+# pytest
+.cache/
 Carthage/Checkouts
 Carthage/Build

@@ -156,6 +156,12 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (setq python-shell-interpreter "python3")
+  (global-company-mode)
+  (setq-default
+   dotspacemacs-configuration-layers
+   '((auto-completion :variables
+                      spacemacs-default-company-backends '(company-files company-capf))))
   (setq inferior-lisp-program "~/lw-console")
 
   (setq-default

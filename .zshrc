@@ -65,7 +65,7 @@ bindkey '^S' history-incremental-search-forward
 bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # ruby rbevn
 export RBENV_ROOT="$(brew --prefix rbenv)"
@@ -82,3 +82,6 @@ export PATH="$PATH:/Library/TeX/Distributions/TeXLive-2012.texdist/Contents/Prog
 export PATH="/Applications/Blender/blender.app/Contents/MacOS/blender:$PATH"
 alias blender=/Applications/Blender/blender.app/Contents/MacOS/blender
 export PYTHONPATH="$HOME/repos/git/blender-source/build_darwin_bpy/bin:$PYTHONPATH"
+
+# homebrew
+export HOMEBREW_NO_GITHUB_API=1

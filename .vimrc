@@ -1,12 +1,25 @@
+" plug
+call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'airblade/vim-gitgutter'
+" See: https://zerokspot.com/weblog/2016/07/10/editorconfig-in-neovim/
+Plug 'altercation/vim-colors-solarized'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'itchyny/lightline.vim'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'mzlogin/vim-markdown-toc'
+Plug 'vimwiki/vimwiki'
+call plug#end()
+
 " dont be compatible with vi
-set nocompatible
 filetype plugin on
 syntax on
-
-" Pathogen 
-execute pathogen#infect()
-execute pathogen#helptags()
-filetype plugin indent on
 
 " dont write in more than 80 cols and show a vertical line indicator 
 set textwidth=79
@@ -30,7 +43,6 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
             \| exe "normal g'\"" | endif
 endif
-
 
 " show and highlight line numbers set nu
 

@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -41,15 +48,14 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+# Theme
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
 source $ZSH/oh-my-zsh.sh
 
-export TERM=xterm-256color
-
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:~/anaconda/bin:/sbin:/opt/X11/bin:~/.dotfiles/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/usr/local/opt/gems/:/bin:/usr/sbin:~/anaconda/bin:/sbin:/opt/X11/bin:~/.dotfiles/bin:$PATH
 
-# Powerline
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # alias vi and vim to macvim
 alias vi="mvim -v"
@@ -85,3 +91,10 @@ export PYTHONPATH="$HOME/repos/git/blender-source/build_darwin_bpy/bin:$PYTHONPA
 
 # homebrew
 export HOMEBREW_NO_GITHUB_API=1
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+alias ls='colorls --light'

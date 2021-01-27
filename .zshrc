@@ -101,5 +101,4 @@ export HOMEBREW_NO_GITHUB_API=1
 
 alias ls='colorls --light'
 
-export APIKEY="AKCp8hz3Xpidi7b2HpPQcraWDq5xt5jqC5ARH2ohGbRjyz5K2hiZ3DnxFJnGyPrrQMTVnvgVJ"
 export PATH="/usr/local/opt/ruby/bin:$PATH"

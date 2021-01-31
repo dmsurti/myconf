@@ -60,11 +60,11 @@ export PATH=/usr/local/bin:/usr/bin:/usr/local/opt/gems/:/bin:/usr/sbin:~/anacon
 
 
 # alias vi and vim to macvim
-alias vi="mvim -v"
-alias vim="mvim -v"
+alias vi="nvim"
+alias vim="nvim"
 
 # vi key bindings for zsh
-export EDITOR="mvim -v"
+export EDITOR="nvim"
 bindkey -v
 
 # vi style incremental search

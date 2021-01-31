@@ -16,6 +16,7 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'vimwiki/vimwiki'
 Plug 'rhysd/vim-clang-format'
 Plug 'dense-analysis/ale'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " dont write in more than 80 cols and show a vertical line indicator
@@ -210,10 +211,6 @@ set softtabstop=4
 " nerd tree
 nnoremap <silent> <C-k><C-B> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\.xfasl$']
-augroup nerdtree_open
-    autocmd!
-    autocmd VimEnter * NERDTree | wincmd p
-augroup END
 
 set laststatus=2
 set nu

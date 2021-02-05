@@ -102,3 +102,5 @@ export HOMEBREW_NO_GITHUB_API=1
 alias ls='colorls --light'
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+alias tx="tmuxinator"

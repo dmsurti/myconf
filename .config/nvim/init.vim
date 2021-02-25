@@ -1,5 +1,9 @@
 " plug
 call plug#begin(stdpath('data').'/plugged')
+set nocompatible
+call plug#begin()
+Plug 'sheerun/vim-polyglot'
+call plug#end()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 " See: https://zerokspot.com/weblog/2016/07/10/editorconfig-in-neovim/
@@ -17,9 +21,10 @@ Plug 'vimwiki/vimwiki'
 Plug 'rhysd/vim-clang-format'
 Plug 'dense-analysis/ale'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'phanviet/vim-monokai-pro'
 call plug#end()
 
-" dont write in more than 80 cols and show a vertical line indicator
+" dont write in more than 119 cols and show a vertical line indicator
 set textwidth=119
 set cc=+1
 highlight ColorColumn ctermbg=lightyellow guibg=green
@@ -27,6 +32,13 @@ highlight ColorColumn ctermbg=lightyellow guibg=green
 
 " who is my leader
 let mapleader=","
+
+set termguicolors
+colorscheme monokai_pro
+
+let g:lightline = {
+      \ 'colorscheme': 'monokai_pro',
+      \ }
 
 " esc 
 inoremap jj <Esc>`^

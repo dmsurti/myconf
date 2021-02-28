@@ -99,7 +99,7 @@ export HOMEBREW_NO_GITHUB_API=1
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias ls='colorls --light'
+alias ls='colorls --dark'
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 

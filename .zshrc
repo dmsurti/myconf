@@ -56,7 +56,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/usr/local/opt/gems/:/bin:/usr/sbin:~/anaconda/bin:/sbin:/opt/X11/bin:~/.dotfiles/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/usr/local/opt/gems/:/bin:/usr/sbin:~/anaconda/bin:/sbin:/opt/X11/bin:~/.dotfiles/bin:~/doom-emacs/bin:$PATH
 
 
 # alias vi and vim to macvim

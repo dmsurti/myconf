@@ -34,7 +34,7 @@ highlight ColorColumn ctermbg=lightyellow guibg=green
 let mapleader=","
 
 set termguicolors
-colorscheme monokai_pro
+" colorscheme monokai_pro
 
 let g:lightline = {
       \ 'colorscheme': 'monokai_pro',

@@ -22,12 +22,13 @@ Plug 'rhysd/vim-clang-format'
 Plug 'dense-analysis/ale'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'phanviet/vim-monokai-pro'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " dont write in more than 119 cols and show a vertical line indicator
-set textwidth=119
+set textwidth=99
 set cc=+1
-highlight ColorColumn ctermbg=lightyellow guibg=green
 
 
 " who is my leader
@@ -225,7 +226,7 @@ nnoremap <silent> <C-k><C-B> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\.xfasl$']
 
 set laststatus=2
-set nu
+set nonu
 
 " fzf
 nnoremap <silent> <Leader>f :Files<CR>
@@ -255,3 +256,7 @@ nnoremap <Leader>cf :<C-u>ClangFormat<CR>
 
 " ALE Linters
 let g:ale_linters = {'cpp': ['clangtidy']}
+
+" Table Mode
+let g:table_mode_corner_corner='+'
+let g:table_mode_header_fillchar='='

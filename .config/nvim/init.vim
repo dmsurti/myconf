@@ -1,9 +1,6 @@
 " plug
 call plug#begin(stdpath('data').'/plugged')
 set nocompatible
-call plug#begin()
-Plug 'sheerun/vim-polyglot'
-call plug#end()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 " See: https://zerokspot.com/weblog/2016/07/10/editorconfig-in-neovim/
@@ -31,15 +28,10 @@ set textwidth=99
 set cc=+1
 
 
-" who is my leader
 let mapleader=","
 
 set termguicolors
-" colorscheme monokai_pro
-
-let g:lightline = {
-      \ 'colorscheme': 'monokai_pro',
-      \ }
+colorscheme dracula
 
 " esc 
 inoremap jj <Esc>`^

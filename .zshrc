@@ -48,15 +48,16 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="dracula-pro"
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/usr/local/opt/gems/:/bin:/usr/sbin:~/anaconda/bin:/sbin:/opt/X11/bin:~/.dotfiles/bin:~/doom-emacs/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/usr/local/opt/gems/:/bin:/usr/sbin:~/anaconda/bin:/sbin:/opt/X11/bin:~/.dotfiles/bin:$PATH
 
 
 # alias vi and vim to macvim
@@ -99,8 +100,20 @@ export HOMEBREW_NO_GITHUB_API=1
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias ls='colorls --dark'
-
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 alias tx="tmuxinator"
+
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+# add doom to path
+export PATH="$HOME/doom-emacs/bin:$PATH"
+
+# cargo bin
+export PATH="$HOME/.cargo/bin:$PATH"
+
+export LD_LIBRARY_PATH="/Library/Developer/CommandLineTools/usr/lib/:$LD_LIBRARY_PATH"

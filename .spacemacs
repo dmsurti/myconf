@@ -149,8 +149,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Anonymous Pro for Powerline"
-                               :size 18.0
+   dotspacemacs-default-font '("Source Code Pro"
+                               :size 21
                                :weight regular
                                :width normal)
    ;; The leader key
@@ -325,7 +325,7 @@ layers configuration."
    dotspacemacs-configuration-layers
    '((auto-completion :variables
                       spacemacs-default-company-backends '(company-files company-capf))))
-  (setq inferior-lisp-program "~/lw-console")
+  (setq inferior-lisp-program "sbcl")
 
   (setq-default
    vc-follow-symlinks t

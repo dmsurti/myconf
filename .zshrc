@@ -100,3 +100,5 @@ export HOMEBREW_NO_GITHUB_API=1
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias tx="tmuxinator"
+
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
